@@ -14,5 +14,26 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    //return view('home');
+    return "test";
+});
+
+Route::view('/ProdukSapi', function () {
+    return view('produkSapi');
+});
+
+Route::view('/ProdukAyam', function () {
+    return view('produkAyam');
+});
+
+Route::view('/ProdukIkan', function () {
+    return view('produkIkan');
+});
+
+Route::view('/BestSellers', function () {
+    return view('bestSellers');
+});
+
+Route::view('/Favorite', function () {
+    return view('favorit');
 });
