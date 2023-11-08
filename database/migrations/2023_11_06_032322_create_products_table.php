@@ -8,14 +8,14 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration
 {
     /**
-     * Run the migrations.
+     * wet ass pus
      */
     public function up(): void
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-        
+
             $table->string('name');
             $table->text('description');
             $table->string('type');
