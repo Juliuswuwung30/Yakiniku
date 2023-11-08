@@ -14,26 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    //return view('home');
-    return "test";
+    return view('home');
 });
 
-Route::view('/ProdukSapi', function () {
-    return view('produkSapi');
-});
+Route::view('/ProdukSapi', 'ProdukSapi');
 
-Route::view('/ProdukAyam', function () {
-    return view('produkAyam');
-});
+Route::view('/ProdukAyam', 'ProdukAyam');
 
-Route::view('/ProdukIkan', function () {
-    return view('produkIkan');
-});
+Route::view('/ProdukIkan', 'ProdukIkan');
 
-Route::view('/BestSellers', function () {
-    return view('bestSellers');
-});
+Route::view('/BestSellers', 'BestSellers');
 
-Route::view('/Favorite', function () {
-    return view('favorit');
-});
+Route::view('/Favorite', 'Favorite');
