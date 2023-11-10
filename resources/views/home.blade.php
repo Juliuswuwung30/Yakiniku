@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 </head>
 
+<img src="{{ asset('images/' . $product->image) }}" alt="{{ $product->name }}">
+
+
 <body class="bg-gray-100 d-flex justify-content-center align-items-center" style="height: 100vh;">
     <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: rgb(255, 67, 67);">
         <!-- logo -->
@@ -29,29 +32,32 @@
                 <button type="submit" class="btn btn-danger btn-lg" href="/Favorite"><span
                         class="bi bi-heart-fill"></span></button>
             </a>
+          </div>
+        </nav>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #e3f2fd;">
+      <div class="container-fluid ">
+        <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+                <!-- Navigation -->
+              <a class="nav-link active" aria-current="page" href="/">BestSellers</a>
+            </li>
+            <li class="nav-item px-4">
+
+              <a class="nav-link px-4" href="/ProdukSapi">Sapi</a>
+            </li>
+            <li class="nav-item px-4">
+
+              <a class="nav-link px-4" href="/ProdukAyam">Ayam</a>
+            </li>
+            <li class="nav-item px-4">
+
+              <a class="nav-link px-4" href="/ProdukIkan">Ikan</a>
+            </li>
+          </ul>
         </div>
-    </nav>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #43b1ff;">
-        <div class="container-fluid ">
-            <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <!-- Navigation -->
-                        <a class="nav-link active" aria-current="page" href="/">Best Sellers</a>
-                    </li>
-                    <li class="nav-item px-4">
-                        <a class="nav-link px-4" href="/ProdukSapi">Sapi</a>
-                    </li>
-                    <li class="nav-item px-4">
-                        <a class="nav-link px-4" href="/ProdukAyam">Ayam</a>
-                    </li>
-                    <li class="nav-item px-4">
-                        <a class="nav-link px-4" href="/ProdukIkan">Ikan</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+      </div>
+      </nav>
 </body>
 
 </html>

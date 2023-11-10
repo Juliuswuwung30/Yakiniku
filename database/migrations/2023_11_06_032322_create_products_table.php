@@ -20,7 +20,8 @@ return new class extends Migration
             $table->text('description');
             $table->string('type');
             $table->integer('price');
-            $table->foreignIdFor(Category::class);
+            $table->string('image');
+           
         });
     }
 
