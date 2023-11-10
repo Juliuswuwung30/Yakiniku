@@ -1,6 +1,8 @@
 <?php
 
+use App\Models\Product;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,13 +16,24 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $products=Product::all();
+    return view('home')->with('products', $products)->with('currentPage',"All");
 });
 
-Route::view('/ProdukSapi', 'ProdukSapi');
 
-Route::view('/ProdukAyam', 'ProdukAyam');
+Route::get('/produk-ayam', function () {
+    $ayam = Product::where('type','ayam')->get();
+    return view('home')->with('products', $ayam)->with('currentPage',"Ayam");
+});
 
-Route::view('/ProdukIkan', 'ProdukIkan');
+Route::get('/produk-ikan', function () {
+    $ikan = Product::where('type','ikan')->get();
+    return view('home')->with('products', $ikan)->with('currentPage',"Ikan");
+});
 
 Route::view('/Favorite', 'Favorite');
+
+Route::get('/produk-sapi', function () {
+    $sapi = Product::where('type','sapi')->get();
+    return view('home')->with('products', $sapi)->with('currentPage',"Sapi");
+});

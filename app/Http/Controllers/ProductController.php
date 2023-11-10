@@ -13,7 +13,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        $products = Product::all();
+
+        return view('home', ['products' => $products]);
     }
 
     /**
@@ -69,4 +71,12 @@ class ProductController extends Controller
     $products = Product::all(); // Assuming you have a Product model
     return view('navbar', compact('products'));
 }
+
+
+public function sapi()
+{
+    $products = Product::where('type', 'sapi')->get();
+    return view('ProdukSapi', compact('products'));
+}
+
 }

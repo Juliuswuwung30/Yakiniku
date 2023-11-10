@@ -15,7 +15,10 @@
 
 <body class="bg-gray-100" style="height: 100vh">
     <div class="navbar navbar-expand-sm bg-body-tertiary " style="align-content: space-between">
-        <div class="px-4"><img src="325445-removebg-preview.png" class="p-1" style="height:100px" /></div>
+        <div class="px-4">
+            <img src="/images/325445-removebg-preview.jpg" class="p-1" style="height: 100px;" alt="Image Alt Text">
+        </div>
+
         <!-- Searchbar -->
         <div class="input-group input-group-sm p-3 container-sm">
 
@@ -38,19 +41,43 @@
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <!-- Navigation -->
-                        <a class="nav-link active" aria-current="page" href="/">Best Sellers</a>
+                        <a
+                        @if ($currentPage=="All")
+                        class="nav-link active"
+                        @else
+                        class="nav-link px-4"
+                        @endif
+                        aria-current="page" href="/">All</a>
                     </li>
                     <li class="nav-item px-4">
 
-                        <a class="nav-link px-4" href="/ProdukSapi">Sapi</a>
+                        <a
+                        @if ($currentPage=="Sapi")
+                        class="nav-link active"
+                        @else
+                        class="nav-link px-4"
+                        @endif
+                        href="/produk-sapi">Sapi</a>
                     </li>
                     <li class="nav-item px-4">
 
-                        <a class="nav-link px-4" href="/ProdukAyam">Ayam</a>
+                        <a
+                        @if ($currentPage=="Ayam")
+                        class="nav-link active"
+                        @else
+                        class="nav-link px-4"
+                        @endif
+                        href="/produk-ayam">Ayam</a>
                     </li>
                     <li class="nav-item px-4">
 
-                        <a class="nav-link px-4" href="/ProdukIkan">Ikan</a>
+                        <a
+                        @if ($currentPage=="Ikan")
+                        class="nav-link active"
+                        @else
+                        class="nav-link px-4"
+                        @endif
+                        href="/produk-ikan">Ikan</a>
                     </li>
                 </ul>
             </div>

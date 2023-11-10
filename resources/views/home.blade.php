@@ -1,7 +1,7 @@
 @extends('layouts.navbar')
+
 @section('layout_contect')
-    
-<div class="container">
+    <div class="container">
         <div class="masthead-subheading">YAKINIKU AT HOME</div>
         <div class="masthead-heading text-uppercase">Best BBQ supplier in Town</div>
         <!-- Button trigger modal -->
@@ -9,24 +9,26 @@
             Learn More
         </button>
 
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        Sebuah bisnis daging slice frozen dari Bojonegoro, ada bermacam-macam daging seperti ayam, sapi dan
-                        ikan. Ada juga produk2 homemade seperti sauce yakiniku yg menambah kenikmatan saat BBQ.
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <h1> Best Sellers</h1>
+        <!-- Modal content as before -->
 
-    @endsection
+        <h1> Best Sellers - Sapi</h1>
+
+        <div class="row">
+            @foreach ($products as $product)
+
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <img src="{{ asset('images/' . $product->image) }}" alt="{{ $product->name }}" class="bd-placeholder-img card-img-top" width="100%" height="225">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $product->name }}</h5>
+                                <p class="card-text">{{ $product->description }}</p>
+                                <p class="card-text">Price: {{ $product->price }}</p>
+                                <!-- Add more details as needed -->
+                            </div>
+                        </div>
+                    </div>
+        
+            @endforeach
+        </div>
+    </div>
+@endsection
