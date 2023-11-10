@@ -23,6 +23,4 @@ Route::view('/ProdukAyam', 'ProdukAyam');
 
 Route::view('/ProdukIkan', 'ProdukIkan');
 
-Route::view('/BestSellers', 'BestSellers');
-
 Route::view('/Favorite', 'Favorite');

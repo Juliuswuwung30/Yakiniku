@@ -63,4 +63,10 @@ class ProductController extends Controller
     {
         //
     }
+
+    public function showProducts()
+{
+    $products = Product::all(); // Assuming you have a Product model
+    return view('navbar', compact('products'));
+}
 }
