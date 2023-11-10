@@ -12,16 +12,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('products', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-            $table->string('name');
-            $table->text('description');
-            $table->enum('type',['sapi','ayam','ikan']);
-            $table->integer('price');
-            $table->string('image');
-           
-        });
+        // Schema::create('products', function (Blueprint $table) {
+        //     $table->id();
+        //     $table->timestamps();
+        //     $table->string('name');
+        //     $table->text('description');
+        //     $table->string('type');
+        //     $table->integer('price');
+        //     $table->string('image');
+
+        //     $table->foreign('type')->references('name')->on('categories');
+
+        // });
     }
 
     /**
