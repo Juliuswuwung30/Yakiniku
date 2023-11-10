@@ -37,3 +37,15 @@ Route::get('/produk-sapi', function () {
     $sapi = Product::where('type','sapi')->get();
     return view('home')->with('products', $sapi)->with('currentPage',"Sapi");
 });
+
+
+Route::get('/product/{id}', function (string $id) {
+$product=Product::find($id);
+    return view('detail')->with('product', $product);
+});
+
+
+
+
+
+
