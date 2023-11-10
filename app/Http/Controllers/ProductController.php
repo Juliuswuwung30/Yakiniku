@@ -78,5 +78,10 @@ public function sapi()
     $products = Product::where('type', 'sapi')->get();
     return view('ProdukSapi', compact('products'));
 }
+public function showDetail($id)
+{
+    $product = Product::findOrFail($id); // Adjust this based on your actual method to fetch a single product
+    return view('detail', compact('product'));
+}
 
 }
