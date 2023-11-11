@@ -3,6 +3,7 @@
 @section('layout_contect')
     <div class="container">
         <!-- About -->
+        @if ($currentPage == 'All')
         <div class="row">
             <div class="col-md-8 mx-auto text-center">
                 <div class="maintxt">
@@ -17,7 +18,7 @@
                 </div>
             </div>
         </div>
-
+@endif
         <p></p>
 
         <!-- Product Cards -->
