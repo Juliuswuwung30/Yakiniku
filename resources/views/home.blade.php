@@ -4,21 +4,24 @@
     <div class="container">
         <!-- About -->
         @if ($currentPage == 'All')
-        <div class="row">
-            <div class="col-md-8 mx-auto text-center">
-                <div class="maintxt">
-                    <div class="masthead-subheading"><strong>YAKINIKU AT HOME</strong></div>
-                    <p></p>
-                    <div class="masthead-heading">Best BBQ supplier in Town</div>
-                    <a href="/about">
-                        <button type="button" class="btn btn-info">
-                            Learn More
-                        </button>
-                    </a>
+            <div class="row">
+                <div class="col-md-8 mx-auto text-center pt-5">
+                    <div class="maintxt pt-5 pb-5">
+                        <div class="masthead-subheading"><strong>YAKINIKU AT HOME</strong></div>
+                        <p></p>
+                        <div class="masthead-heading">Best BBQ supplier in Town</div>
+                        <div>
+                            <p></p>
+                        <a href="/about">
+                            <button type="button" class="btn btn-info">
+                                Learn More
+                            </button>
+                        </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-@endif
+        @endif
         <p></p>
 
         <!-- Product Cards -->
