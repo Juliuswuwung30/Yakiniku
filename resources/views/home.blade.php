@@ -2,26 +2,37 @@
 
 @section('layout_contect')
     <div class="container">
-        <div class="masthead-subheading">YAKINIKU AT HOME</div>
-        <div class="masthead-heading text-uppercase">Best BBQ supplier in Town</div>
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Learn More
-        </button>
+        <!-- About -->
+        <div class="row">
+            <div class="col-md-8 mx-auto text-center">
+                <div class="maintxt">
+                    <div class="masthead-subheading"><strong>YAKINIKU AT HOME</strong></div>
+                    <p></p>
+                    <div class="masthead-heading">Best BBQ supplier in Town</div>
+                    <a href="/about">
+                        <button type="button" class="btn btn-info">
+                            Learn More
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
 
-        <!-- Modal content as before -->
+        <p></p>
 
+        <!-- Product Cards -->
         <div class="row">
             @foreach ($products as $product)
-                <div class="col-md-4">
-                    <div class="card mb-4 shadow-sm">
-                        <a href="/product/{{$product->id}}"> <!-- Make the image clickable with a link to the detail view -->
-                            <img src="{{ asset('images/' . $product->image) }}" alt="{{ $product->name }}" class="bd-placeholder-img card-img-top" width="100%" height="225">
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                        <a href="/product/{{ $product->id }}">
+                            <!-- Make the image clickable with a link to the detail view -->
+                            <img src="{{ asset('images/' . $product->image) }}" alt="{{ $product->name }}"
+                                class="bd-placeholder-img card-img-top" width="100%" height="225">
                         </a>
                         <div class="card-body">
                             <h5 class="card-title">{{ $product->name }}</h5>
                             <p class="card-text">Price: {{ $product->price }}</p>
-
                         </div>
                     </div>
                 </div>
