@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,12 +26,6 @@
                 aria-describedby="search-addon" />
             <button type="button" class="btn btn-primary">search</button>
         </div>
-        <div class="px-4">
-            <!-- favorite Button -->
-            <a href="/Favorite">
-                <button type="submit" class="btn btn-danger btn-lg"><span class="bi bi-heart-fill"></span></button>
-            </a>
-        </div>
     </div>
     <nav class="navbar navbar-expand-lg bg-body-tertiary bg-primary-subtle">
         <div class="container-fluid">
@@ -40,9 +35,8 @@
                         <!-- Navigation -->
                         <a @if ($currentPage == 'All') class="nav-link active" 
                             @else
-                            class="nav-link"
-                            @endif aria-current="page"
-                            href="/">All</a>
+                            class="nav-link" @endif
+                            aria-current="page" href="/">All</a>
                     </li>
                     <li class="nav-item">
                         <a @if ($currentPage == 'Sapi') class="nav-link active"
@@ -74,4 +68,3 @@
 
 
 </html>
-

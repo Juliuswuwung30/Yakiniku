@@ -34,7 +34,7 @@
                                 </div>
                                 <div class="modal-body">
                                     <h1>{{ $product->name }}</h1>
-                                    <p >Description: {{ $product->description }}</p>
+                                    <p>Description: {{ $product->description }}</p>
                                     <p>Price: Rp.{{ $product->price }}</p>
                                     <p>Type: {{ $product->type }}</p>
                                 </div>
@@ -44,12 +44,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Favorite button -->
-                    {{-- <form method="POST" action="{{ route('product.favorite', ['product' => $product]) }}"> --}}
-                    @csrf
-                    <button type="submit" class="btn btn-danger"><span class="bi bi-heart-fill"></span></button>
-                    {{-- </form> --}}
                 </div>
             </div>
         </div>
