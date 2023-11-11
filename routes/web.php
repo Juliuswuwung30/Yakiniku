@@ -3,6 +3,7 @@
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Models\Category;
 
 Route::get('/', function () {
     $products=Product::all();
@@ -11,19 +12,18 @@ Route::get('/', function () {
 
 
 Route::get('/produk-ayam', function () {
-    $ayam = Product::where('type','ayam')->get();
-    return view('home')->with('products', $ayam)->with('currentPage','Ayam');
+    $ayam = Category::where('name','ayam')->first();
+    return view('home')->with('products', $ayam->products)->with('currentPage','Ayam');
 });
 
 Route::get('/produk-ikan', function () {
-    $ikan = Product::where('type','ikan')->get();
-    return view('home')->with('products', $ikan)->with('currentPage','Ikan');
+    $ikan = Category::where('name','ikan')->first();
+    return view('home')->with('products', $ikan->products)->with('currentPage','Ikan');
 });
 
-
 Route::get('/produk-sapi', function () {
-    $sapi = Product::where('type','sapi')->get();
-    return view('home')->with('products', $sapi)->with('currentPage','Sapi');
+    $sapi = Category::where('name','sapi')->first();
+    return view('home')->with('products', $sapi->products)->with('currentPage','Sapi');
 });
 
 
@@ -31,8 +31,6 @@ Route::get('/product/{id}', function (string $id) {
 $product=Product::find($id);
     return view('detail')->with('product', $product)->with('currentPage',$product->type);
 });
-
-Route::view('/favorite', 'Favorite');
 
 Route::get('/about', function () {
         return view('About')->with('currentPage','All');
