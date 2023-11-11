@@ -13,12 +13,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
     </script>
-    <style>
-        .maintxt {
-            background-image: image/meat.png;
-            background-size: cover;
-        }
-    </style>
 
 </head>
 
@@ -33,7 +27,9 @@
         </div>
         <div class="px-4">
             <!-- favorite Button -->
+            <a href="/Favorite">
                 <button type="submit" class="btn btn-danger btn-lg"><span class="bi bi-heart-fill"></span></button>
+            </a>
         </div>
     </div>
     <nav class="navbar navbar-expand-lg bg-body-tertiary bg-primary-subtle">

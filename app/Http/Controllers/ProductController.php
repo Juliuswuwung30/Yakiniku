@@ -84,4 +84,16 @@ public function showDetail($id)
     return view('detail', compact('product'));
 }
 
+public function toggleFavorite(Product $product)
+{
+    // Logic to toggle the favorite status (add/remove from favorite list)
+    // You can use the authenticated user's favorite method or a dedicated favorites table
+    // For simplicity, I'll use the user's favorites method assuming you have a User model with a favorites relationship.
+
+    auth()->user()->toggleFavorite($product);
+
+    // Redirect back or to a specific page
+    return redirect()->back()->with('success', 'Product added to favorites!');
+}
+
 }
