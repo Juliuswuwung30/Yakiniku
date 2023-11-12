@@ -26,6 +26,11 @@ Route::get('/produk-sapi', function () {
     return view('home')->with('products', $sapi->products)->with('currentPage','Sapi');
 });
 
+Route::get('/produk-snacks', function () {
+    $snacks = Category::where('name','snacks')->first();
+    return view('home')->with('products', $snacks->products)->with('currentPage','Snacks');
+});
+
 
 Route::get('/product/{id}', function (string $id) {
 $product=Product::find($id);

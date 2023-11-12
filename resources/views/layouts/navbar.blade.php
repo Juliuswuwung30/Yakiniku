@@ -56,6 +56,12 @@
                             class="nav-link" @endif
                             href="/produk-ikan">Ikan</a>
                     </li>
+                    <li class="nav-item">
+                        <a @if ($currentPage == 'Snacks') class="nav-link active"
+                            @else
+                            class="nav-link" @endif
+                            href="/produk-snacks">Snacks</a>
+                    </li>
                 </ul>
             </div>
         </div>
