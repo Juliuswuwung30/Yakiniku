@@ -14,6 +14,40 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .image-stack {
+            position: relative;
+        }
+
+        .image-stack__item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%; /* Set to 100% to cover the entire width of the column */
+            height: 100%; /* Set to 100% to cover the entire height of the column */
+            z-index: -1; /* Set a negative value to make the image appear behind the content */
+        }
+
+        .text-box {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            margin-top: 20px;
+            z-index: 1; /* Ensure text box appears on top of the image */
+        }
+
+        /* Adjust the max-width of the image */
+        .image-stack__item img {
+            max-width: 100%; /* Set to 100% to make the image responsive */
+            height: auto;
+        }
+
+        .yakiniku-section {
+            padding-bottom: 20px; /* Adjust the value as needed for the desired padding */
+        }
+    </style>
 
 </head>
 
