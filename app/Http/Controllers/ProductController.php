@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Category;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
 
@@ -68,20 +69,36 @@ class ProductController extends Controller
 
     public function showProducts()
 {
-    $products = Product::all(); // Assuming you have a Product model
-    return view('navbar', compact('products'));
+    $products = Product::all();
+    return view('home')->with('products', $products)->with('currentPage','All');
 }
+
 
 
 public function sapi()
 {
-    $products = Product::where('type', 'sapi')->get();
-    return view('ProdukSapi', compact('products'));
+    $sapi = Category::where('name','sapi')->first();
+    return view('home')->with('products', $sapi->products)->with('currentPage','Sapi');
+}
+public function ikan()
+{
+    $ikan = Category::where('name','ikan')->first();
+    return view('home')->with('products', $ikan->products)->with('currentPage','Ikan');
+}
+public function ayam()
+{
+    $ayam = Category::where('name','ayam')->first();
+    return view('home')->with('products', $ayam->products)->with('currentPage','Ayam');
+}
+public function snacks()
+{
+    $snacks = Category::where('name','snacks')->first();
+    return view('home')->with('products', $snacks->products)->with('currentPage','Snacks');
 }
 public function showDetail($id)
 {
     $product = Product::findOrFail($id); // Adjust this based on your actual method to fetch a single product
-    return view('detail', compact('product'));
+    return $product;
 }
 
 public function toggleFavorite(Product $product)
