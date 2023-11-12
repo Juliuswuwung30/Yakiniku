@@ -54,12 +54,6 @@
 <body class="bg-gray-100" style="height: 100vh">
     <div class="navbar navbar-expand-sm bg-body-tertiary bg-primary-subtle">
         <div class="px-4"><img src="{{ url('/images/logo1.png') }}" class="p-1" style="height:100px" /></div>
-        <!-- Searchbar -->
-        <div class="input-group input-group-sm p-3 container-sm">
-            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
-                aria-describedby="search-addon" />
-            <button type="button" class="btn btn-primary">search</button>
-        </div>
     </div>
     <nav class="navbar navbar-expand-lg bg-body-tertiary bg-primary-subtle">
         <div class="container-fluid">
