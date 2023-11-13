@@ -15,6 +15,9 @@
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
     <style>
         .image-stack {
             position: relative;
@@ -54,7 +57,11 @@
 <body class="bg-gray-100" style="height: 100vh">
     <div class="navbar navbar-expand-sm bg-body-tertiary bg-primary-subtle">
         <div class="px-4"><img src="{{ url('/images/logo1.png') }}" class="p-1" style="height:100px" /></div>
+        <h1 style="font-family: Agbalumo; font-size: 500%; color:#800000" >Yakiniku At Home</h2>
+
     </div>
+
+        
     <nav class="navbar navbar-expand-lg bg-body-tertiary bg-primary-subtle">
         <div class="container-fluid">
             <div class="collapse navbar-collapse d-flex justify-content-center " id="navbarNavDropdown">
@@ -64,31 +71,31 @@
                         <a @if ($currentPage == 'All') class="nav-link active" 
                             @else
                             class="nav-link" @endif
-                            aria-current="page" href="/">All</a>
+                            aria-current="page" href="/" style="font-size: 150%">All</a>
                     </li>
                     <li class="nav-item">
                         <a @if ($currentPage == 'Sapi') class="nav-link active"
                             @else
                             class="nav-link" @endif
-                            href="/produk-sapi">Sapi</a>
+                            href="/produk-sapi" style="font-size: 150%">Sapi</a>
                     </li>
                     <li class="nav-item">
                         <a @if ($currentPage == 'Ayam') class="nav-link active"
                             @else
                             class="nav-link" @endif
-                            href="/produk-ayam">Ayam</a>
+                            href="/produk-ayam" style="font-size: 150%">Ayam</a>
                     </li>
                     <li class="nav-item">
                         <a @if ($currentPage == 'Ikan') class="nav-link active"
                             @else
                             class="nav-link" @endif
-                            href="/produk-ikan">Ikan</a>
+                            href="/produk-ikan" style="font-size: 150%">Ikan</a>
                     </li>
                     <li class="nav-item">
                         <a @if ($currentPage == 'Snacks') class="nav-link active"
                             @else
                             class="nav-link" @endif
-                            href="/produk-snacks">Snacks</a>
+                            href="/produk-snacks" style="font-size: 150%">Snacks</a>
                     </li>
                 </ul>
             </div>
